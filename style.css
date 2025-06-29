@@ -64,6 +64,26 @@ html, body {
   animation: slideLeftToRight var(--gif-speed) linear infinite;
 }
 
+/* ─── OneMusic licensing badge in header ───────────────────────────────── */
+.header-onemusic {
+  position: absolute;
+  top: 1rem;    /* adjust up/down as needed */
+  right: 1rem;  /* adjust left/right as needed */
+  z-index: 2;   /* above GIFs and logos */
+}
+.header-onemusic img {
+  max-height: 80px;  /* match header height */
+  width: auto;
+  height: auto;
+  display: block;
+}
+@media (max-width: 600px) {
+  .header-onemusic {
+    display: none;
+  }
+}
+
+
 /* ─── ANIMATIONS ───────────────────────────────────────────────────────────── */
 @keyframes slideRightToLeft {
   0%   { transform: translateX(100vw); }
